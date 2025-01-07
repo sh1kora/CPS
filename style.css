@@ -327,7 +327,7 @@ a {
 }
 
 .sidebar__item--highlighted:before {
-    /*content: url("/svg/highlight.svg");*/
+    /*content: url("svg/highlight.svg");*/
     position: absolute;
     left: 0;
     content: "";
