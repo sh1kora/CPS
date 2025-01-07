@@ -117,7 +117,7 @@ a {
 }
 
 .content__title--highlighted:before {
-    content: url("/svg/title-highlight.svg");
+    content: url("svg/title-highlight.svg");
     position: absolute;
     left: 0;
 }
@@ -232,7 +232,7 @@ a {
 
 .about__button-readMore::before {
     vertical-align: center;
-    content: url("/svg/arrows.svg");
+    content: url("svg/arrows.svg");
     position: absolute;
     height: 24px;
     width: 24px;
