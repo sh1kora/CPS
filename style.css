@@ -1,0 +1,350 @@
+@import url("fonts/TTLakes/stylesheet.css");
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+    font-size: 16px;
+    background-color: #F8F8F8;
+    color: rgba(27, 28, 33, 1);
+    font-family: "TT Lakes", monospace;
+}
+
+/* mobil first */
+
+/* <header> */
+.header {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    max-height: 88px;
+    width: 100%;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    background-color: #FFFFFF;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* separators */
+.separator {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__separator-logo {
+    display: none;
+}
+.header__separator-burgers {
+    margin-right: 20px;
+}
+.header__separator {}
+
+/* burger buttons */
+.burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 40px;
+    min-width: 40px;
+    background-color: rgba(255, 62, 121, 1);
+    color: white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.burger:hover {
+    background-color: rgba(255, 62, 121, 0.5);
+}
+.burger:active {
+    background-color: rgba(255, 62, 121, 0.8);
+}
+
+.header__burger {}
+.header__burger-group {
+    display: flex;
+    gap: 16px;
+}
+.header__burger-group--temp {
+    display: none;
+}
+.header__burger-group--const {}
+
+/* </header> */
+
+/* <main> */
+.content {
+}
+
+/* content header */
+.content__header {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+.content__title {
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0 16px;
+    text-wrap: nowrap;
+}
+.content__title:before {
+    content: url("/svg/title-highlight.svg");
+    position: absolute;
+    left: 0;
+}
+.content__burger-group {
+    display: none;
+    gap: 32px;
+    margin-right: 32px;
+}
+.content__burger-wrapper {
+    display: flex;
+    align-items: center;
+}
+.content__burger-label {
+    text-wrap: nowrap;
+    margin-right: 8px;
+}
+.content__burger {}
+
+/* navigation menu */
+.menu {
+}
+.menu__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding-left: 16px;
+
+    position: relative; /* Для позиционирования mask */
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 1%, black 90%, rgba(0, 0, 0, 0));
+}
+.menu__item {
+    display: flex;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 8px 16px;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: 0.2s
+}
+.menu__item:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 62, 121, 0.5);
+}
+.menu__item:hover .menu__link {
+    color: rgba(255, 62, 121, 1);
+}
+.menu__item--active {
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(184, 255, 236, 1);
+}
+.menu__link {
+    text-wrap: nowrap;
+    text-align: center;
+    line-height: 24px;
+    text-decoration: none;
+    color: rgba(126, 126, 130, 1);
+}
+
+/* about section */
+.about {
+    display: block;
+    margin-top: 24px;
+}
+
+.about__description {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+}
+.about__text {
+    margin: 0
+}
+
+.about__button-readMore {
+    position: relative;
+    font-family: "TT Lakes", monospace;
+    font-weight: 500;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 16px 32px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.about__button-readMore::before {
+    vertical-align: center;
+    content: url("/svg/arrows.svg");
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: -32px;
+}
+
+.about__button-readMore:hover {
+    color: rgba(255, 62, 121, 1);
+}
+
+.about__image {
+    width: 100%;
+}
+
+/* </main> */
+
+/* others sizes support */
+
+@media screen and (min-width: 340px) {
+    .header__separator-logo {
+        display: flex;
+    }
+    .header__separator {
+        margin: 0 20px;
+    }
+
+    .header__logo {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .about__image {
+        box-sizing: border-box;
+        padding: 0 16px;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .header__burger-group--temp {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .about {
+        display: flex;
+        margin: 24px 24px 0;
+        gap: clamp(36px, 42px, 48px);
+    }
+    .about__description {
+        width: 50%;
+        padding: 0;
+    }
+
+    .about__text {
+        margin-bottom: 10px;
+    }
+
+    .about__button-readMore {
+        margin: 0 32px;
+    }
+
+    .about__image {
+        border-radius: 6px;
+        width: 50%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu__list {
+        padding-left: 24px;
+        margin-top: 32px;
+    }
+
+    .about {
+        margin-top: 32px;
+    }
+
+    .about__text:after {
+        content: attr(data-text-less);
+        display: block;
+        margin: 1em 0;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .about__text:after {
+        content: attr(data-text-more);
+        display: block;
+        margin: 1em 0;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .content {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .content__header {
+        margin-top: 42px;
+    }
+
+    .content__title {
+        margin-right: auto;
+    }
+
+    .content__burger-group {
+        display: flex;
+    }
+
+    .menu__list {
+        margin-top: 8px;
+        flex-wrap: wrap;
+        mask-image: none;
+    }
+
+    .about {
+        margin-top: 8px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1120px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .content {
+        max-width: 90%
+    }
+}
+
+@media screen and (min-width: 1332px) {
+    .menu__list {
+        margin-top: 20px;
+    }
+
+    .about {
+        margin-top: 40px;
+    }
+}
