@@ -27,7 +27,7 @@
         </svg>
     </div>
     <a href="" class="header__logo logo"><img src="/svg/logo.svg" alt="CPS"></a>
-    <div class="header__burger-group header__burger-group--temp">
+    <div class="burger-group header__burger-group--temp">
         <button class="header__burger burger-callback burger">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -67,7 +67,7 @@
             <rect width="2" height="32" rx="1" fill="#EAEAEA"/>
         </svg>
     </div>
-    <div class="header__burger-group header__burger-group--const">
+    <div class="burger-group header__burger-group--const">
         <button class="header__burger burger-offer burger">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.25807 13.4583L8.66685 13.0494L6.94998 11.3322L6.54121 11.7411L6.33682 11.5367C6.0098 11.1687 5.68278 10.9643 5.35575 11.0052C5.11049 11.0052 4.9061 11.1687 4.74259 11.414C4.49732 11.8229 4.61996 12.2726 4.66083 12.5588C4.66083 12.6406 4.70171 12.6815 4.70171 12.7632C4.70171 12.8859 4.70171 13.0494 4.41557 13.0903C4.00679 13.213 3.47538 13.3356 2.94397 13.6218C2.20817 14.0307 1.71764 14.3987 1.4315 14.7666C-0.0809772 16.7291 0.000778159 18.4055 0.000778159 18.4872C0.000778159 18.6099 0.0416558 18.6917 0.123411 18.7325L1.22711 19.8773C1.30886 19.9591 1.39062 20 1.47237 20C1.47237 20 1.51325 20 1.59501 20C2.00378 20 3.47538 19.9182 5.19224 18.569C5.56014 18.2828 5.92804 17.7922 6.33682 17.0562C6.62296 16.5656 6.78647 16.0341 6.86823 15.5844C6.94998 15.2982 7.07262 15.2982 7.19525 15.2982C7.23613 15.2982 7.31788 15.339 7.39964 15.339C7.56315 15.3799 7.72666 15.4208 7.93105 15.4208C8.13544 15.4208 8.33983 15.3799 8.54421 15.2573C8.78948 15.0937 8.95299 14.8893 8.99387 14.644C9.03475 14.3169 8.87123 13.9898 8.50334 13.7036L8.25807 13.4583Z"
@@ -90,7 +90,7 @@
 
 <main class="content">
     <div class="content__header">
-        <h1 class="content__title">Услуги и сервисы</h1>
+        <h1 class="content__title content__title--highlighted">Услуги и сервисы</h1>
         <div class="content__burger-group">
             <div class="content__burger-wrapper">
                 <label for="offerBtn" class="content__burger-label">Оставить заявку</label>
@@ -142,6 +142,80 @@
         <img class="about__image" src="/images/photo-logo.png" alt="Логотип CPS">
     </section>
 </main>
+
+<div class="overlay"></div>
+
+<aside class="sidebar sidebar--hidden">
+    <div class="sidebar__head">
+        <button class="sidebar__burger burger-close burger">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79348 1.25712C2.40295 0.866593 1.76979 0.866592 1.37927 1.25712L1.25712 1.37927C0.866592 1.76979 0.866593 2.40296 1.25712 2.79348L7.46364 9L1.25712 15.2065C0.866593 15.597 0.866592 16.2302 1.25712 16.6207L1.37927 16.7429C1.76979 17.1334 2.40295 17.1334 2.79348 16.7429L9 10.5364L15.2065 16.7429C15.597 17.1334 16.2302 17.1334 16.6207 16.7429L16.7429 16.6207C17.1334 16.2302 17.1334 15.597 16.7429 15.2065L10.5364 9L16.7429 2.79348C17.1334 2.40296 17.1334 1.76979 16.7429 1.37927L16.6207 1.25712C16.2302 0.866592 15.597 0.866593 15.2065 1.25712L9 7.46364L2.79348 1.25712Z" fill="white"/>
+            </svg>
+        </button>
+        <a href="" class="sidebar__logo logo"><img src="/svg/logo.svg" alt="CPS"></a>
+        <button class="sidebar__burger burger-search burger">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5006 11.0006H11.7106L11.4306 10.7306C12.6306 9.33063 13.2506 7.42063 12.9106 5.39063C12.4406 2.61063 10.1206 0.390626 7.32063 0.0506256C3.09063 -0.469374 -0.469374 3.09063 0.0506256 7.32063C0.390626 10.1206 2.61063 12.4406 5.39063 12.9106C7.42063 13.2506 9.33063 12.6306 10.7306 11.4306L11.0006 11.7106V12.5006L15.2606 16.7506C15.6706 17.1606 16.3306 17.1606 16.7406 16.7506L16.7506 16.7406C17.1606 16.3306 17.1606 15.6706 16.7506 15.2606L12.5006 11.0006ZM6.50063 11.0006C4.01063 11.0006 2.00063 8.99063 2.00063 6.50063C2.00063 4.01063 4.01063 2.00063 6.50063 2.00063C8.99063 2.00063 11.0006 4.01063 11.0006 6.50063C11.0006 8.99063 8.99063 11.0006 6.50063 11.0006Z" fill="white"/>
+            </svg>
+        </button>
+    </div>
+    <nav class="sidebar__menu">
+        <ul class="sidebar__list">
+            <li class="sidebar__item sidebar__item--highlighted"><a href="#" class="sidebar__link">Ремонт техники</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Услуги и сервисы</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Корпоративным клиентам</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Продавцам техники</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Партнерам</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Производителям</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Наши сервисные центры</a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__link">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar__burger-group burger-group">
+        <button class="sidebar__burger burger-callback burger">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.76019 12.25L4.30019 11.96C4.91019 11.89 5.51019 12.1 5.94019 12.53L7.78019 14.37C10.6102 12.93 12.9302 10.62 14.3702 7.78L12.5202 5.93C12.0902 5.5 11.8802 4.9 11.9502 4.29L12.2402 1.77C12.3602 0.76 13.2102 0 14.2302 0H15.9602C17.0902 0 18.0302 0.94 17.9602 2.07C17.4302 10.61 10.6002 17.43 2.07019 17.96C0.940193 18.03 0.00019455 17.09 0.00019455 15.96V14.23C-0.00980568 13.22 0.750193 12.37 1.76019 12.25Z"
+                      fill="white"/>
+            </svg>
+        </button>
+        <button class="sidebar__burger burger-feedback burger">
+            <svg data-v-656ad1c2="" width="20" height="20" viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs data-v-656ad1c2="">
+                    <path data-v-656ad1c2=""
+                          d="M28,11 L12,11 C10.9,11 10.01,11.9 10.01,13 L10,31 L14,26 L28,26 C29.1,26 30,25.1 30,24 L30,13 C30,11.9 29.1,11 28,11 Z M21,22 L15,22 C14.45,22 14,21.55 14,21 C14,20.45 14.45,20 15,20 L21,20 C21.55,20 22,20.45 22,21 C22,21.55 21.55,22 21,22 Z M25,17 L15,17 C14.45,17 14,16.55 14,16 C14,15.45 14.45,15 15,15 L25,15 C25.55,15 26,15.45 26,16 C26,16.55 25.55,17 25,17 Z"
+                          id="path-1"></path>
+                </defs>
+                <g data-v-656ad1c2="" id="Symbols" stroke="none" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd">
+                    <g data-v-656ad1c2="" id="ic/chat" transform="translate(-10.000000, -11.000000)">
+                        <mask data-v-656ad1c2="" id="mask-2">
+                            <use data-v-656ad1c2="" xlink:href="#path-1"></use>
+                        </mask>
+                        <use data-v-656ad1c2="" id="icon" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <button class="sidebar__burger burger-profile burger">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 9C12.9853 9 15 6.98528 15 4.5C15 2.01472 12.9853 0 10.5 0C8.01472 0 6 2.01472 6 4.5C6 6.98528 8.01472 9 10.5 9Z"
+                      fill="white"/>
+                <path d="M0.0165859 16.6118C-0.113065 17.3412 0.535191 18 1.33903 18H18.6604C19.4902 18 20.1125 17.3412 19.9829 16.6118C19.2309 12.4 15.0561 10 9.99973 10C4.94333 10 0.768563 12.4 0.0165859 16.6118Z"
+                      fill="white"/>
+            </svg>
+        </button>
+    </div>
+    <div class="sidebar__contacts">
+        <a href="" class="sidebar__contact contact-mail">mail@cps.com</a>
+        <a href="" class="sidebar__contact contact-phone">8 800 890 8900</a>
+    </div>
+    <div class="sidebar__lang-switch">
+        <a href="#" class="sidebar__lang sidebar__lang--active ru">ru</a>
+        <a href="#" class="sidebar__lang en">en</a>
+        <a href="#" class="sidebar__lang ch">ch</a>
+    </div>
+</aside>
 
 <script src="script.js"></script>
 </body>
