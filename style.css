@@ -104,6 +104,7 @@ a {
 
 /* <main> */
 .content {
+    max-width: 1120px;
 }
 
 /* content header */
@@ -259,15 +260,21 @@ a {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* TODO испарвить высоту контента сайдбара */
 /* sidebar */
+
+.sidebar__wrapper {
+    height: 100%;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
-    width: 320px;
     height: 100vh;
+    width: 320px;
     padding: 24px;
     box-sizing: border-box;
     background-color: white;
@@ -470,11 +477,18 @@ a {
 
 @media screen and (min-width: 1120px) {
     .content {
-        width: 100%;
-        max-width: 1120px;
         margin: 0 auto;
-        padding: 0 16px;
-        box-sizing: border-box;
+    }
+}
+
+/* TODO исправить центрирование */
+@media screen and (min-width: 1240px) {
+    .content {
+        box-sizing: content-box;
+        padding-left: 340px; /* ширина сайдбара + паддинг */
+        padding-right: 20px;
+        margin: 0 auto;
+        /*padding: 0 16px;*/
     }
 
     .header {
@@ -505,20 +519,33 @@ a {
         margin-left: auto;
         max-width: 1120px;
     }
-}
 
-@media screen and (min-width: 1300px) {
-    .content {
-        max-width: 90%
+    .sidebar--hidden {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .sidebar__logo {
+        margin-left: 0;
+    }
+
+    .burger-close {
+        display: none;
     }
 }
 
-@media screen and (min-width: 1332px) {
-    .menu__list {
-        margin-top: 20px;
-    }
+/*@media screen and (min-width: 1300px) {*/
+/*    */
+/*}*/
 
-    .about {
-        margin-top: 40px;
-    }
-}
+/*@media screen and (min-width: 1332px) {*/
+/*    .menu__list {*/
+/*        margin-top: 20px;*/
+/*    }*/
+
+/*    .about {*/
+/*        margin-top: 40px;*/
+/*    }*/
+/*}*/
