@@ -260,7 +260,7 @@ a {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* TODO испарвить высоту контента сайдбара */
+/* испарвить высоту контента сайдбара */
 /* sidebar */
 
 .sidebar__wrapper {
@@ -481,7 +481,7 @@ a {
     }
 }
 
-/* TODO исправить центрирование */
+/*  исправить центрирование */
 @media screen and (min-width: 1240px) {
     .content {
         box-sizing: content-box;
