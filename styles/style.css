@@ -653,6 +653,11 @@ ul {
         /*padding: 0 16px;*/
     }
 
+    .content > * {
+        box-sizing: border-box;
+        padding: 0 32px;
+    }
+
     .header {
         display: none;
     }
@@ -673,8 +678,8 @@ ul {
         margin-top: 8px;
         flex-wrap: wrap;
         mask-image: none;
-        padding-right: 16px;
-        padding-left: 16px;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .about {
@@ -698,8 +703,20 @@ ul {
     .burger-close {
         display: none;
     }
+
+    .section {
+        padding: 0;
+    }
+
+    .brands-outer-wrap {
+        padding: 0 32px;
+    }
 }
 
+
+@media screen and (min-width: 1440px) {
+
+}
 
 /* стили для тестов */
 

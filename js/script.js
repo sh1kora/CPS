@@ -45,6 +45,7 @@ function toggleClassOnClick(buttonSelector, targetSelector, toggleClass) {
 
     button.addEventListener('click', () => {
         target.classList.toggle(toggleClass);
+        button.textContent = target.classList.contains(toggleClass) ? 'Скрыть' : 'Показать все';
     });
 }
 
