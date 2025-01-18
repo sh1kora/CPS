@@ -125,12 +125,13 @@ ul {
 }
 
 .content__title--highlighted {
+    position: relative;
 }
 
 .content__title--highlighted:before {
     content: url("../svg/title-highlight.svg");
     position: absolute;
-    left: 0;
+    left: -16px;
 }
 
 .content__title {
@@ -566,6 +567,10 @@ ul {
         margin-left: 24px;
     }
 
+    .content__title--highlighted:before {
+        left: -24px;
+    }
+
     .menu__list {
         padding-left: 24px;
         margin-top: 32px;
@@ -585,18 +590,22 @@ ul {
         margin-top: 32px;
     }
 
+    .brands-outer-wrap {
+        padding: 0 24px;
+    }
+
     .swiper {
         position: relative;
         margin-top: 24px;
-        padding: 0 24px;
         mask-image: none;
+        padding: 0;
     }
 
     .swiper-wrapper {
         display: grid;
         grid-column-gap: 24px;
         grid-row-gap: 16px;
-        grid-template-columns: repeat(3, minmax(210px, 240px));
+        grid-template-columns: repeat(3, minmax(210px, 300px));
         justify-content: center;
         height: 160px;
     }
@@ -606,6 +615,7 @@ ul {
     }
 
     .swiper-slide {
+        max-width: 300px;
     }
     .swiper-pagination {
         display: none;
@@ -626,9 +636,7 @@ ul {
 
 @media screen and (min-width: 990px) {
     .swiper-wrapper {
-        display: grid;
         grid-column-gap: 32px;
-        grid-row-gap: 16px;
         grid-template-columns: repeat(4, minmax(210px, 240px));
     }
 }
@@ -644,7 +652,7 @@ ul {
 }
 
 /*  исправить центрирование */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1260px) {
     .content {
         box-sizing: content-box;
         padding-left: 320px; /* ширина sidebar */
@@ -668,6 +676,10 @@ ul {
 
     .content__title {
         margin-right: auto;
+    }
+
+    .content__title--highlighted:before {
+        left: -56px;
     }
 
     .content__burger-group {
@@ -708,14 +720,31 @@ ul {
         padding: 0;
     }
 
+    .swiper-wrapper {
+        grid-column-gap: 32px;
+        grid-template-columns: repeat(3, minmax(210px, 300px));
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .swiper-wrapper {
+        grid-template-columns: repeat(4, minmax(210px, 240px));
+    }
+
     .brands-outer-wrap {
         padding: 0 32px;
     }
 }
 
+@media screen and (min-width: 1530px) {
+    .menu__list {
+        justify-content: center;
+    }
 
-@media screen and (min-width: 1440px) {
-
+    .brands-outer-wrap {
+    /*  решить проблему с отступами у кнопки раскрытия */
+    }
 }
 
 /* стили для тестов */
