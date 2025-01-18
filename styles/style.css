@@ -1,4 +1,4 @@
-@import url("fonts/TTLakes/stylesheet.css");
+@import url("../fonts/TTLakes/stylesheet.css");
 
 body {
     margin: 0;
@@ -15,6 +15,10 @@ body {
 a {
     text-decoration: none;
     color: rgba(27, 28, 33, 1);
+}
+
+ul {
+    list-style: none;
 }
 
 /* <header> */
@@ -118,7 +122,7 @@ a {
 }
 
 .content__title--highlighted:before {
-    content: url("svg/title-highlight.svg");
+    content: url("../svg/title-highlight.svg");
     position: absolute;
     left: 0;
 }
@@ -163,6 +167,7 @@ a {
     margin-top: 24px;
     margin-bottom: 0;
     padding-left: 16px;
+    padding-right: 40px; /* длинна последнего menu__item в списке*/
 
     position: relative; /* Для позиционирования mask */
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 1%, black 90%, rgba(0, 0, 0, 0));
@@ -234,7 +239,7 @@ a {
 
 .about__button-readMore::before {
     vertical-align: center;
-    content: url("svg/arrows.svg");
+    content: url("../svg/arrows.svg");
     position: absolute;
     height: 24px;
     width: 24px;
@@ -247,7 +252,105 @@ a {
 
 .about__image {
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+/* content section */
+.section {
+    width: 100vw;
+    margin-top: 24px;
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    border-top: 1px solid #D9FFF5;
+    /* background-color: black; */
+}
+
+.section__title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7E7E82;
+    padding: 0;
+    margin: 0;
+}
+
+/* swiper js classes */
+
+
+.swiper {
+    position: relative;
+    margin-top: 16px;
+    padding: 0 16px;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    max-height: 72px;
+    max-width: 240px;
+    background-color: #ffffff;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 16px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #B5B6BC;
+    opacity: 0.4;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: #FF3E79;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+    opacity: 1;
+}
+
+.burger-slide {
+    background-color: transparent;
+    border: 2px solid #FF3E79;
+    background-image: url("../svg/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brands {
+}
+
+.brands-wrapper {
+}
+
+.brands__slide {
+}
+
+.brands__image {
+}
+
+.brands__link {
+    margin-left: auto;
+}
+
+
+
 
 /* </main> */
 
@@ -281,7 +384,8 @@ a {
     background-color: white;
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
     -2px 0 4px 0 rgba(69, 79, 126, 0.02);
-    transition:  1s;
+    transition: transform 0.5s;
+    z-index: 3;
 }
 
 .sidebar--hidden {
@@ -466,6 +570,31 @@ a {
         display: block;
         margin: 1em 0;
     }
+
+    .section {
+        margin-top: 32px;
+    }
+
+    .swiper {
+        position: relative;
+        margin-top: 24px;
+        padding: 0 24px;
+        mask-image: none;
+    }
+
+    .swiper-wrapper {
+        display: grid;
+        grid-column-gap: 24px;
+        grid-row-gap: 16px;
+        grid-template-columns: repeat(3, minmax(224px, 240px));
+        justify-content: center;
+    }
+
+    .swiper-slide {
+    }
+    .swiper-pagination {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 968px) {
@@ -473,6 +602,14 @@ a {
         content: attr(data-text-more);
         display: block;
         margin: 1em 0;
+    }
+
+    .swiper-wrapper {
+        display: grid;
+        grid-column-gap: 24px;
+        grid-row-gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(224px, 240px));
+        justify-content: center;
     }
 }
 
@@ -512,6 +649,8 @@ a {
         margin-top: 8px;
         flex-wrap: wrap;
         mask-image: none;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 
     .about {
