@@ -747,6 +747,12 @@ ul {
     }
 }
 
+@media screen and (min-width: 1700px) {
+    .swiper-wrapper {
+        grid-template-columns: repeat(5, minmax(210px, 300px));
+    }
+}
+
 /* стили для тестов */
 
 .section {
